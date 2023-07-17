@@ -1,0 +1,90 @@
+{
+	"name": "插件名称",
+	"id": "插件标识，需要保证唯一性",
+	"version": "插件版本号",
+	"description": "插件描述信息",
+	"_dp_type":"nativeplugin",
+	"_dp_nativeplugin":{
+		"android": {
+			"plugins": [
+				{
+					"type": "module|component, 必填, 根据插件类型选择",
+					"name": "必填, 注册插件的名称, 注意：module 的 name 必须以插件id为前缀或和插件id相同，比如 `DCTestUniPlugin-TestModule`，其中 DCTestUniPlugin 为插件的id，避免与其他插件冲突，component 的 name 没有强制要求，但是也要保证唯一比如 `dc-map`",
+					"class": "必填, 注册插件的类名"
+				}
+			],
+			"hooksClass": "可选, 事件钩子注册类名",
+			"integrateType": "必填, 可取值aar|jar",
+			"dependencies": [
+				"可选, 依赖的库名称"
+			],
+			"excludeDependencies": [
+				"可选，需要排除的HX内置模块依赖库名称"  
+			],
+			"compileOptions": {  
+				"sourceCompatibility": "1.8",
+				"targetCompatibility": "1.8"
+			},
+			"abis": [
+				"可选, 支持的abi类型, 可取值armeabi-v7a|arm64-v8a|x86"
+			],
+			"minSdkVersion": "可选，支持的Android最低版本，如21",
+			"useAndroidX": false,   
+			"permissions": [
+				"可选, 要使用的Android权限列表"
+			],
+			"parameters": {
+				"插件需要配置的参数名称, 如appid": {
+					"des": "参数描述",
+					"key": "AndroidManifest.xml中添加meta-data节点！对应android:name属性值, 如GETUI_APPID",
+					"placeholder": "build.gradle中添加到manifestPlaceholders中的字段名"
+				}
+			}
+		},
+		"ios": {
+			"plugins": [
+				{
+					"type": "必填, module|component, 根据插件类型选择",
+					"name": "必填, 注册插件的名称, 通常与插件标识一致",
+					"class": "必填, 注册插件的类名" 
+				}
+			],
+			"integrateType": "必填, 可取值framework|library",
+			"hooksClass": "可选, 事件钩子注册类名",
+			"frameworks": [
+				"依赖的系统库(系统库有.framework和.tbd和.dylib类型)，和第三方.framework动态库;（.a 库或 .framework**静态库**直接放到ios根目录即可，不需要配置）"
+			],
+			"embedFrameworks": [
+				"依赖的.framework动态库（注意.framework动态库也需要在上面的 frameworks 节点添加配置，同样将动态库.framework文件放到 ios 目录）"
+			],
+			"capabilities": {    
+				"entitlements": {   
+				},
+				"plists": {    
+				}
+			},
+			"plists": {    
+			},
+			"assets": [   
+			 	"可选，插件要使用的xcassets文件列表，相对于ios目录的路径"
+			],
+			"privacies": [
+				"可选, 插件使用到的隐私列表，如NSPhotoLibraryUsageDescription"
+			],
+			"embedSwift": false,  
+			"deploymentTarget": "8.0, 可选，注意：使用 Xcode14 需配置为 11.0",
+			"validArchitectures": [   
+			 	"arm64" , "armv7"   
+			],
+			"parameters": {
+				"插件需要配置的参数名称, 如appid": {
+					"des": "参数描述信息",
+					"key": "参数需要配置到info.plist中的键名, 嵌套时使用:分割，如getui:appid"
+				}
+			},
+			"resources": [
+				"可选, 插件要使用的资源文件列表，相对于ios目录的路径 ，HX 3.2.0+ 版本不在推荐使用，请参考文档下面的 “依赖资源文件” 说明"
+			]
+		}
+	}
+}

@@ -1,0 +1,83 @@
+{
+  "id": "guyue-updater",
+  "displayName": "App版本升级弹框和进度提示",
+  "version": "1.0.1",
+  "description": "app热更新模块，支持apk安装以及wgt升级，支持显示弹窗升级、静默更新以及强制更新，支持进度显示，支持覆盖原生tabar，原生导航栏",
+  "keywords": [
+    "热更新",
+    "进度提示",
+    "版本升级",
+    "app自动升级",
+    "wgt自动升级"
+],
+  "repository": "",
+  "engines": {
+    "HBuilderX": "^3.4.9"
+  },
+  "dcloudext": {
+    "type": "sdk-js",
+    "sale": {
+      "regular": {
+        "price": "9.98"
+      },
+      "sourcecode": {
+        "price": "16.80"
+      }
+    },
+    "contact": {
+      "qq": "2292550932"
+    },
+    "declaration": {
+      "ads": "无",
+      "data": "插件不采集任何数据",
+      "permissions": "无"
+    },
+    "npmurl": ""
+  },
+  "uni_modules": {
+    "dependencies": [],
+    "encrypt": [],
+    "platforms": {
+      "cloud": {
+        "tcb": "y",
+        "aliyun": "y"
+      },
+      "client": {
+        "Vue": {
+          "vue2": "y",
+          "vue3": "y"
+        },
+        "App": {
+        },
+        "H5-mobile": {
+          "Safari": "n",
+          "Android Browser": "n",
+          "微信浏览器(Android)": "n",
+          "QQ浏览器(Android)": "n"
+        },
+        "H5-pc": {
+          "Chrome": "n",
+          "IE": "n",
+          "Edge": "n",
+          "Firefox": "n",
+          "Safari": "n"
+        },
+        "小程序": {
+          "微信": "n",
+          "阿里": "n",
+          "百度": "n",
+          "字节跳动": "n",
+          "QQ": "n",
+          "钉钉": "n",
+          "快手": "n",
+          "飞书": "n",
+          "京东": "n"
+        },
+        "快应用": {
+          "华为": "n",
+          "联盟": "n"
+        }
+      }
+    }
+  }
+}
