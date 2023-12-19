@@ -26,6 +26,10 @@
 
 		onLaunch: async function () {
 			console.log("App Launch");
+			console.log(
+				"当前环境：-----------",
+				this.$env[process.env.VUE_APP_ENV_TYPE].baseUrl
+			);
 
 			//#ifdef APP_PLUS
 			/**判断用户登录 */

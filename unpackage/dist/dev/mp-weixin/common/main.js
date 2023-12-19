@@ -135,14 +135,15 @@ var _default = {
           switch (_context.prev = _context.next) {
             case 0:
               console.log("App Launch");
+              console.log("当前环境：-----------", this.$env["stage"].baseUrl);
 
               /**更新弹框 */
-            case 1:
+            case 2:
             case "end":
               return _context.stop();
           }
         }
-      }, _callee);
+      }, _callee, this);
     }));
     function onLaunch() {
       return _onLaunch.apply(this, arguments);
