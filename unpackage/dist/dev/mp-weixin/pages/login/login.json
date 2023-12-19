@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "",
+  "usingComponents": {
+    "u-code": "/node-modules/uview-ui/components/u-code/u-code",
+    "u-text": "/node-modules/uview-ui/components/u-text/u-text",
+    "login": "/components/Login/Login"
+  }
+}

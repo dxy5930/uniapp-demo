@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/shop/shop",
+    "pages/login/login",
+    "pages/personal/personal",
+    "pages/customer/customer",
+    "pages/camera/camera",
+    "pages/detail/detail",
+    "pages/webview/webview",
+    "uni_modules/guyue-updater/pages/updater",
+    "pages/preview/preview"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "美丽书屋",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8",
+    "scrollIndicator": "none"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#1DB4FF",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "static/logo.png",
+        "selectedIconPath": "static/logo.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/shop/shop",
+        "iconPath": "static/logo.png",
+        "selectedIconPath": "static/logo.png",
+        "text": "商城"
+      },
+      {
+        "pagePath": "pages/personal/personal",
+        "iconPath": "static/logo.png",
+        "selectedIconPath": "static/logo.png",
+        "text": "个人中心"
+      }
+    ]
+  },
+  "usingComponents": {}
+}

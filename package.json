@@ -8,50 +8,7 @@
 	},
 	"author": "",
 	"license": "ISC",
-	"uni-app": {
-		"scripts": {
-			"dev": {
-				"title": "微信小程序—开发环境",
-				"env": {
-					"ENV_TYPE": "dev",
-					"UNI_PLATFORM": "mp-weixin"
-				},
-				"define": {
-					"MP-WEIXIN": true
-				}
-			},
-			"test": {
-				"title": "微信小程序—测试环境",
-				"env": {
-					"ENV_TYPE": "test",
-					"UNI_PLATFORM": "mp-weixin"
-				},
-				"define": {
-					"MP-WEIXIN": true
-				}
-			},
-			"stage": {
-				"title": "微信小程序—stage环境",
-				"env": {
-					"ENV_TYPE": "stage",
-					"UNI_PLATFORM": "mp-weixin"
-				},
-				"define": {
-					"MP-WEIXIN": true
-				}
-			},
-			"production": {
-				"title": "微信小程序—生产环境",
-				"env": {
-					"ENV_TYPE": "production",
-					"UNI_PLATFORM": "mp-weixin"
-				},
-				"define": {
-					"MP-WEIXIN": true
-				}
-			}
-		}
-	},
+	
 	"dependencies": {
 		"axios": "^0.27.2",
 		"axios-retry": "^3.5.0",
@@ -67,5 +24,49 @@
 		"vuex": "^4.1.0",
 		"webpack": "^5.84.1",
 		"yaml": "^2.3.1"
+	},
+	"uni-app": {
+		"scripts": {
+			"dev": {
+				"title": "微信小程序—开发环境",
+				"env": {
+					"VUE_APP_ENV_TYPE": "dev",
+					"UNI_PLATFORM": "mp-weixin"
+				},
+				"define": {
+					"MP-WEIXIN": true
+				}
+			},
+			"test": {
+				"title": "微信小程序—测试环境",
+				"env": {
+					"VUE_APP_ENV_TYPE": "test",
+					"UNI_PLATFORM": "mp-weixin"
+				},
+				"define": {
+					"MP-WEIXIN": true
+				}
+			},
+			"stage": {
+				"title": "微信小程序—stage环境",
+				"env": {
+					"VUE_APP_ENV_TYPE": "stage",
+					"UNI_PLATFORM": "mp-weixin"
+				},
+				"define": {
+					"MP-WEIXIN": true
+				}
+			},
+			"production": {
+				"title": "微信小程序—生产环境",
+				"env": {
+					"VUE_APP_ENV_TYPE": "production",
+					"UNI_PLATFORM": "mp-weixin"
+				},
+				"define": {
+					"MP-WEIXIN": true
+				}
+			}
+		}
 	}
 }

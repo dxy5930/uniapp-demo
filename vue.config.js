@@ -39,3 +39,4 @@ if (appid) {
 fs.writeFileSync(manifestPath, Manifest, {
     flag: 'w'
 })
+

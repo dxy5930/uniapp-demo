@@ -67,7 +67,7 @@
           "scrollIndicator": false,
           "titleNView": false
         },
-        "backgroundColor": "transparent",
+        "backgroundColor": "#FFFFFF",
         "disableScroll": true,
         "navigationStyle": "custom"
       }

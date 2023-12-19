@@ -1,0 +1,1 @@
+<view><webview vue-id="9b069568-1" src="{{url}}" bind:__l="__l"></webview></view>

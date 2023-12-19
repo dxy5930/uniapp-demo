@@ -5,15 +5,18 @@ import settle from "axios/lib/core/settle";
 import buildURL from "axios/lib/helpers/buildURL";
 import { toast } from "../utils/index";
 import { STATUSCODES } from "../constant";
+import ENV_CONFIG from '../config/env'
+import axiosRetry from 'axios-retry';
 
-let baseURL = process.env.config[process.env.ENV_TYPE].baseUrl;
-const axiosRetry = require("axios-retry");
 const service = axios.create({
   withCredentials: true,
   crossDomain: true,
   baseURL: baseURL,
   timeout: 6000,
 });
+
+let baseURL = ENV_CONFIG[process.env.VUE_APP_ENV_TYPE].baseUrl;
+
 
 // 配置 Axios Retry
 axiosRetry(service, {

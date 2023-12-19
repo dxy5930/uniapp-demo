@@ -1,26 +1,26 @@
 // 开发环境
 const dev = {
     baseUrl: 'https://dev.....',
-    appid: 'wx11111111111111'
+    appid: 'wxf0701ab381cd8144'
 }
 
 // 测试环境
 const test = {
     baseUrl: 'https://test.....',
-    appid: 'wx22222222222222'
+    appid: 'wxf0701ab381cd8144'
 }
 
 // staging环境
 const stage = {
-    baseUrl: 'https://test.....',
-    appid: 'wx22222222222222'
+    baseUrl: 'https://stage.....',
+    appid: 'wxf0701ab381cd8144'
 }
 
 
 // 生产环境
 const production = {
     baseUrl: 'https://production.....',
-    appid: 'wx333333333333333'
+    appid: 'wxf0701ab381cd8144'
 }
 
 // 注意:这里的属性名要和上面package.json中定义的扩展节点编译名称相同

@@ -1,0 +1,1 @@
+<view class="flex-around-center"><block wx:for="{{providerList}}" wx:for-item="item" wx:for-index="index" wx:key="index"><view data-event-opts="{{[['tap',[['thirdPartyLogin',['$0'],[[['providerList','',index]]]]]]]}}" bindtap="__e">{{item.label}}</view></block></view>
