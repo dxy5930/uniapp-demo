@@ -11,7 +11,7 @@ const test = {
 }
 
 // staging环境
-const staging = {
+const stage = {
     baseUrl: 'https://test.....',
     appid: 'wx22222222222222'
 }
@@ -27,7 +27,7 @@ const production = {
 const ENV_CONFIG = {
     dev,
     test,
-    staging,
+    stage,
     production,
 }
 
