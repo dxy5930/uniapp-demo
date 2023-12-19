@@ -6,7 +6,7 @@ import buildURL from "axios/lib/helpers/buildURL";
 import { toast } from "../utils/index";
 import { STATUSCODES } from "../constant";
 
-let baseURL = process.uniEnv.baseUrl;
+let baseURL = process.env.config[process.env.ENV_TYPE].baseUrl;
 const axiosRetry = require("axios-retry");
 const service = axios.create({
   withCredentials: true,
