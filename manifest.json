@@ -58,12 +58,17 @@
         }
     },
     "quickapp" : {},
-    "mp-weixin" : {
-        "appid": "wxf0701ab381cd8144",
-        "setting" : {
-            "urlCheck" : false
-        },
-        "usingComponents" : true
-    },
+    "mp-weixin": {
+		"appid": "wxf0701ab381cd8144",
+		"setting": {
+			"urlCheck": false,
+			"es6": true,
+			"postcss": true,
+			"minified": true
+		},
+		"usingComponents": true,
+		"lazyCodeLoading": "requiredComponents",
+		"libVersion": "latest"
+	},
     "vueVersion" : "2"
 }
