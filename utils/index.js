@@ -533,10 +533,7 @@ export function getScreenWidth() {
  */
 export function reLaunch(url, params = {}) {
   try {
-    url += (url?.indexOf("?") < 0 ? "?" : "&") + param(params);
-    uni.reLaunch({
-      url,
-    });
+    this.$Router.replaceAll({ name: url, params: params });
   } catch (e) {
     throw new Error("跳转失败");
   }
@@ -548,17 +545,7 @@ export function reLaunch(url, params = {}) {
  */
 export function switchTab(url) {
   try {
-    return new Promise((resovle, reject) => {
-      uni.switchTab({
-        url, // 跳转的url
-        success: (e) => {
-          resovle(e); // 成功回调
-        },
-        fail: (e) => {
-          reject(e); // 失败回调
-        },
-      });
-    });
+    this.$Router.pushTab({ name: url });
   } catch (e) {
     throw new Error("跳转失败");
   }
@@ -570,9 +557,7 @@ export function switchTab(url) {
  */
 export function navigateBack(delta = 1) {
   try {
-    uni.navigateBack({
-      delta,
-    });
+    this.$Router.back(delta, {});
   } catch (e) {
     throw new Error("跳转失败");
   }
@@ -586,18 +571,7 @@ export function navigateBack(delta = 1) {
  */
 export function redirectTo(url, params = {}) {
   try {
-    url += (url?.indexOf("?") < 0 ? "?" : "&") + param(params);
-    return new Promise((resovle, reject) => {
-      uni.redirectTo({
-        url,
-        success: (e) => {
-          resovle(e);
-        },
-        fail: (e) => {
-          reject(e);
-        },
-      });
-    });
+    this.$Router.replace({ name: url, params });
   } catch (e) {
     throw new Error("跳转失败");
   }
